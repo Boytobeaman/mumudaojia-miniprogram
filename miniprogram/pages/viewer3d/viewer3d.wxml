@@ -1,0 +1,3 @@
+<!--miniprogram/pages/viewer3d/viewer3d.wxml-->
+
+<web-view wx:if="finalUrl" src='{{finalUrl}}'></web-view>

@@ -1,0 +1,3 @@
+<view class="container" wx:if="{{show}}" style="margin-top: {{top}}rpx;">
+    {{content}}
+</view>

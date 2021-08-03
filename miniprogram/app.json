@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/plaza/index",
+    "pages/goujian/goujian",
+    "pages/viewer3d/viewer3d",
+    "components/tabs/index",
+    "pages/service-detail/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2e5e86",
+    "navigationBarTitleText": "盈嘉demo",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "selectedColor": "#fbc02d",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "pagePath": "pages/plaza/index",
+        "text": "广场",
+        "selectedIconPath": "images/tabbar/square-selected.png",
+        "iconPath": "images/tabbar/square.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/ic_home_normal.png",
+        "selectedIconPath": "images/ic_home_pressed.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "i-tabs": "/components/tabs/index",
+    "i-icon": "/components/icon/index",
+    "i-button": "/components/button/index",
+    "i-avatar": "/components/avatar/index",
+    "i-service-preview": "/components/service-preview/index",
+    "i-skeleton": "/components/skeleton/index",
+    "i-show-status": "/components/show-status/index",
+    "i-rating": "/components/rating/index",
+    "i-rating-item": "/components/rating-item/index",
+    "i-safe-area": "/components/safe-area/index"
+  }
+}

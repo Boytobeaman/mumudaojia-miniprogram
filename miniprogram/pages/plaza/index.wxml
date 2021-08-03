@@ -1,0 +1,69 @@
+<!--pages/join/join.wxml-->
+<!-- <view class="container">
+  <view>
+    <view class="tabs">
+      <view class="tab-item" wx:for="{{tabs}}">
+        <view class="tab-label">
+          {{item}}
+        </view>
+        <view class="divider"></view>
+      </view>
+    </view>
+    <view class="category">
+      category
+    </view>
+    <view class="tab-panel">
+      tab panel
+    </view>
+  </view>
+</view> -->
+
+<view class="container">
+    <i-tabs tabs="{{tabs}}" class="tabs" catch:change="handleTabChange">
+        <view slot="extend">
+            <view class="remark" bind:tap="handleNavRemark">
+                <image class="remark-image" src="https://imooc.qinchenju.com/remark1.jpg"></image>
+            </view>
+            <view class="category-swiper">
+                <swiper style="height:150rpx" display-multiple-items="{{multiple}}" next-margin="60rpx">
+                    <swiper-item wx:for="{{categoryList}}" wx:key="index">
+                        <view class="category-swiper-item" data-id="{{item.id}}" bind:tap="handleChangeCategory">
+                            <text>{{item.name}}</text>
+                        </view>
+                    </swiper-item>
+                </swiper>
+            </view>
+        </view>
+        <view slot="plan" class="tab-panel">
+            <view wx:for="{{serviceList}}" wx:key="index" data-skeleton-list>
+                <i-service-preview service="{{item}}" bind:select="handleSelect"/>
+            </view>
+            <i-show-status show="{{showStatus}}" top="220" content="暂时还没有任何服务"></i-show-status>
+        </view>
+    </i-tabs>
+</view>
+
+
+<!-- <view class="container">
+  <view class="page-body">
+    <swiper class="swiper-wrap" style="width:100%" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}" style="text-align:center">{{item}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd">指示点</view>
+      <view class="weui-cell__ft">
+        <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+      </view>
+    </view>
+
+    <i-tabs tabs="{tabs}" bind:change="handleTabChange">
+      <button>插槽</button>
+    </i-tabs>
+  </view>
+</view> -->

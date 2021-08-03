@@ -1,0 +1,33 @@
+<!--index.wxml-->
+
+
+
+<view class="container swiper">
+
+  <swiper class="swipper-wrap" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image mode="scaleToFill" style="width:100%;height:100%"  src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+</view>
+<view class='items-list'>
+  <view class='pro-item' wx:for="{{proList}}" wx:key='index' bindtap='toDetail' data-index='{{index}}'>
+    <view class='pro-body'>
+      <view class='pro-tile'>{{item.title}}</view>
+      <text class='pro-desc'>{{item.shortDesc}}</text>
+      <view class='pro-footer'>
+        <!-- <image class="btn-detail" src='/images/btn_detail.png'></image>
+        <button open-type="contact" class="btn-ask"><image src='/images/btn_ask.png' /></button> -->
+      </view>
+    </view>
+  </view>
+</view>
+
+<button class="btn-ask" bindtap="toGoujianku" type="primary">构件库</button>
+
+<button class="btn-ask" bindtap="toJoinus" type="primary">joinus</button>

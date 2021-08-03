@@ -1,0 +1,9 @@
+<!--pages/goujian/goujian.wxml-->
+<text>pages/goujian/goujian.wxml</text>
+<view>
+  <form bindsubmit="submit" wx:if="{{!user}}">
+    <input name="name" placeholder="请输入名字"></input>
+    <input name="password" placeholder="请输入密码"></input>
+    <button form-type="submit" type="primary">submit</button>
+  </form>
+</view>
